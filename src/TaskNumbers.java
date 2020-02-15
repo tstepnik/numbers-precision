@@ -7,29 +7,20 @@ public class TaskNumbers {
         System.out.println("Podaj liczbę:");
         double usersNumber = sc.nextDouble();
 
-        if (usersNumber>0){
-            double xx=0;
-            while (x<usersNumber+0.1){
-                System.out.print(xx + " ");
-                x+=0.1;
-                xx= (double)Math.round(x*10)/10;
+        if (usersNumber > 0) {
+            double xx = 0;
+            while (x < usersNumber + 0.1) {
+                System.out.printf("%.1f" + " ", x);
+                x += 0.1;
             }
-        }else if (usersNumber<0){
+        } else if (usersNumber < 0) {
             double y = 0;
             double yy = 0;
-            while (y>=usersNumber-0.1){
-                System.out.print(yy + " ");
-                y-=0.1;
-                yy = round(y,1);
+            while (y >= usersNumber - 0.1) {
+                System.out.printf("%.1f" + " ", y);
+                y -= 0.1;
             }
-        }else
+        } else
             System.out.println("Podałeś zero");
-
-
-
-    }
-    private static double round (double value, int precision) {
-        int scale = (int) Math.pow(10, precision);
-        return (double) Math.round(value * scale) / scale;
     }
 }
